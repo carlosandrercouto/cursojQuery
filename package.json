@@ -1,0 +1,24 @@
+{
+  "name": "cursojquery",
+  "version": "1.0.0",
+  "description": "Curso de jQuery B7WEB",
+  "main": "index.js",
+  "dependencies": {
+    "bootstrap": "^4.0.0-beta.2",
+    "jquery": "^3.2.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/carlosandrercouto/cursojQuery.git"
+  },
+  "author": "Carlos André Couto",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/carlosandrercouto/cursojQuery/issues"
+  },
+  "homepage": "https://github.com/carlosandrercouto/cursojQuery#readme"
+}

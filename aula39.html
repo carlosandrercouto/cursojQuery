@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!--	
+	Aula 39 - O que é AJAX?
+	Aula 40 - Conceitos importantes de AJAX
+	Aula 41 - Monitorar Requisições AJAX
+	Aula 42 - Método Auxiliares de Ajax
+-->
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<!-- CSS -->
+	<link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+
+	<!--JS jQUery-->
+	<script src="node_modules/jquery/dist/jquery.min.js" charset="utf-8"></script>
+	<title>Aula 39 Ajax</title>
+</head>
+<body>
+	<div class="container">
+		<div class="row justify-content-center">
+			<div class="col-12">
+				<div class="form-group">
+					<label for="exampleFormControlTextarea1">Teste Ajax</label>
+					<textarea class="form-control" id="testeAjaxInput" rows="3"></textarea>
+				</div>
+			</div>
+		</div>
+
+		<div class="row justify-content-center">
+			<div class="col-4">
+				<button type="button" id="testeAjaxLoad" class="btn btn-primary btn-block">Load</button>
+			</div>
+
+			<div class="col-4">
+				<button type="button" id="testeAjaxGet" class="btn btn-primary btn-block">Get</button>
+			</div>
+
+			<div class="col-4">
+				<button type="button" id="testeAjaxPost" class="btn btn-primary btn-block">Post</button>
+			</div>
+		</div>
+	</div>
+
+	<script type="text/javascript">
+		$("button").on('click', function() {
+			var id = $(this).attr("id");
+			console.log(id);
+
+			switch (id) {
+				case "testeAjaxLoad":
+					$("#testeAjaxInput").load("arquivo_aula39.html");
+				break;
+
+				case "testeAjaxGet":
+					$.get("arquivo_aula39.html", function(data){
+						$("#testeAjaxInput").val(data);
+					});
+				break;
+
+				case "testeAjaxPost":
+					$.post("arquivo_aula39.html", function(data){
+						$("#testeAjaxInput").val(data);
+					});
+
+				break;
+			}
+		});
+
+	</script>
+</body>
+</html>
